@@ -1,4 +1,5 @@
 import Hero from "@/Compunents/Home/Hero";
+import Technology from "@/Compunents/Home/Technology";
 import Navbar from "@/Compunents/Navbar";
 import Image from "next/image";
 
@@ -7,6 +8,7 @@ export default function Home() {
     <>
     <Navbar/>
     <Hero/>
+    <Technology/>
 
     </>
   );

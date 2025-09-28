@@ -7,7 +7,7 @@ import { TbWorld } from "react-icons/tb";
 
 const Hero = () => {
     return (
-        <section className=' relative bottom-[42px] -z-20' >
+        <section className=' relative bottom-[50px] -z-20' >
             <div className="relative">
                 <img className='bg-linear-60 from-[#00AAA5] to-[#006F7E] ' src="/hero_bg.png" alt="ai_img" />
             </div>
@@ -21,7 +21,7 @@ const Hero = () => {
                             Intelligence and Machine Learning</p>
                         <div className="flex gap-8 mt-6 ">
                             <button className='border py-2 px-5 rounded-2xl text-black bg-white'>More Details</button>
-                            <button className='border py-2 px-5 rounded-2xl text-white bg-[#0087FF'>Get Started</button>
+                            <button className='border py-2 px-5 rounded-2xl text-white bg-[#0087FF]'>Get Started</button>
 
                         </div>
                     </div>

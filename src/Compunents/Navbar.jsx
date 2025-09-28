@@ -1,9 +1,16 @@
 "use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { IoMdSearch } from "react-icons/io";
 
 const Navbar = () => {
+
+  const [show, setShow] = useState(false);
+
+  const searchItem = () => {
+    setShow(!show)
+  }
+
   return (
     <section className='container mx-auto relative top-5 '>
       
@@ -17,7 +24,14 @@ const Navbar = () => {
                 <li>Works</li>
                 <li>Blog</li>
             </ul>
-            <p className='text-white w-[40px] h-[40px] border bg-[#0087FF] flex justify-center items-center text-2xl rounded-full '><IoMdSearch /></p>
+            {show ? 
+            <input className='border border-white text-white ' type="search" />
+            :
+            <div className="">
+              
+            </div>
+            }
+            <p onClick={searchItem} className='text-white w-[40px] h-[40px] border bg-[#0087FF] flex justify-center items-center text-2xl rounded-full cursor-pointer '><IoMdSearch /></p>
 
           </div>
         </nav>

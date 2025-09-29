@@ -1,3 +1,4 @@
+import About_h from "@/Compunents/Home/About_h";
 import Hero from "@/Compunents/Home/Hero";
 import Technology from "@/Compunents/Home/Technology";
 import Navbar from "@/Compunents/Navbar";
@@ -9,6 +10,7 @@ export default function Home() {
     <Navbar/>
     <Hero/>
     <Technology/>
+    <About_h/>
 
     </>
   );

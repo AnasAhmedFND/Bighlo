@@ -19,7 +19,7 @@ const Hero = () => {
            
             <div className="container left-1/2 -translate-x-1/2 absolute top-[210px] flex  items-center   ">
                     {/* left-text */}
-                    <div className=" w-[70%] md:pl-32  ">
+                    <div className=" w-[70%] md:pl-32 ">
                         <h1 className={`${jost.className} text-5xl font-bold text-white  `} >Revolutionizing <br /> Artificial Intelligence <br /> (AI) with Transparency</h1>
                         <p className='text-white mt-6'><small> With the current trends in technology and the growing incorporation of Artificial <br />
                             Intelligence and Machine Learning </small></p>

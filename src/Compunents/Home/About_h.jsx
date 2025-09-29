@@ -8,7 +8,7 @@ const jost = Jost({
 
 const About_h = () => {
     return (
-        <section className='border container mx-auto pt-20'>
+        <section className=' container mx-auto pt-20'>
             {/* container */}
             <div className="flex justify-between pb-5">
                 <div className=" w-[48%] ">

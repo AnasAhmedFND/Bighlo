@@ -6,6 +6,7 @@ const jonst = Jost({
 })
 const Project = () => {
     return (
+        <div className='bg-[#F5F5F5]'>
         <section className='container mx-auto text-center  py-10 '>
             <p className='text-blue-400 '>CASE STUDIES</p>
             <h3 className={`${jonst.className} font-bold mt-2 text-3xl `}>Our successful project</h3>
@@ -22,7 +23,7 @@ const Project = () => {
                             sed do eiusmod tempor incididunt labore et
                             dolore magna aliqua.</p>
 
-                            <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] '>Read More</button>
+                            <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] cursor-pointer '>Read More</button>
                     </div>
                 </article>
 
@@ -37,7 +38,7 @@ const Project = () => {
                             sed do eiusmod tempor incididunt labore et
                             dolore magna aliqua.</p>
 
-                            <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] '>Read More</button>
+                            <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] cursor-pointer '>Read More</button>
                     </div>
                 </article>
 
@@ -52,12 +53,14 @@ const Project = () => {
                             sed do eiusmod tempor incididunt labore et
                             dolore magna aliqua.</p>
 
-                            <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] '>Read More</button>
+                            <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] cursor-pointer '>Read More</button>
                     </div>
                 </article>
             </div>
 
         </section>
+
+        </div>
     )
 }
 

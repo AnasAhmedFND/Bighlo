@@ -20,8 +20,8 @@ const Support = () => {
             <button className='border rounded-2xl bg-blue-500 text-white px-5 py-2 text-[14px] h-[40px] '>More Answer</button>
 
             </div>
-            <div className="border bg-white text-black rounded-md px-4 mt-14 ">
-            <p className='text-[12px] flex justify-between py-2 rounded-full px-4 bg-blue-500 text-white mt-2'>  <small>    What is the difference between a Data Scientist, Data Analyst?  </small><RxCross2 /></p>
+            <div className="border bg-white text-black rounded-2xl px-4 mt-14 pb-5 ">
+            <p className='text-[12px] flex justify-between py-2 rounded-full px-4 bg-blue-500 text-white mt-2'>  <small>    What is the difference between a Data Scientist, Data Analyst?  </small><RxCross2 className='cursor-pointer' /></p>
             <p className='text-[10px] mt-4 ' ><small> These cases are perfectly simple and easy to distinguish. In a free hour, when our power choice is <br />
             untrammelled and when nothing prevents our being able do what we like best, every pleasure is to <br />
             be welcomed and every pain avoided. </small></p>

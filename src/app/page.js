@@ -1,4 +1,5 @@
 import About_h from "@/Compunents/Home/About_h";
+import Frequently from "@/Compunents/Home/Frequently";
 import Hero from "@/Compunents/Home/Hero";
 import Pricing from "@/Compunents/Home/Pricing";
 import Project from "@/Compunents/Home/Project";
@@ -19,6 +20,7 @@ export default function Home() {
     <Team/>
     <Support/>
     <Pricing/>
+    <Frequently/>
 
     </>
   );

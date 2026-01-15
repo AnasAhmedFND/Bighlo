@@ -8,7 +8,7 @@ const josts = Jost({
 
 const Pricing = () => {
     return (
-        <section className='container mx-auto border py-10 '>
+        <section className='container mx-auto  py-10 '>
             <h6 className={`${josts.className} text-center text-[#19198a] `} >PRICING PLAN</h6>
             <h2 className={`${josts.className} text-center font-bold text-4xl `} >Our affordable priing plans</h2>
 

@@ -7,15 +7,15 @@ const Frequently = () => {
 
     const [tofic, setTofic] = useState(false);
     const [toficc, setToficc] = useState(false);
-    const [tofic2, setTofic2] = useState(false);
-    const [tofic3, setTofic3] = useState(false);
+    const [show, setShow] = useState(false);
+    const [shows, setShows] = useState(false);
 
 
 
 
 
     return (
-        <section className='container mx-auto  '>
+        <section className='container mx-auto py-10'>
             <h2 className='text-center font-bold text-2xl '>Frequently Asked Questions</h2>
             <p className='text-center mt-2'> <small>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et <br />
@@ -35,13 +35,43 @@ const Frequently = () => {
                         </small>
                     </div>
                     {/* two */}
-                    <div className="border py-4 px-2 rounded-xl mt-4 bg-[#F7F5FD] w-[95%] ">
+                    <div onClick={() => setShows(!shows)} className="border py-4 px-2 rounded-xl mt-4 bg-[#F7F5FD] w-[95%] ">
                         <h4 className='flex items-center justify-between font-bold'>What access do I have on a free trial?   <IoIosArrowDown /></h4>
                     </div>
+
+                    { shows && (
+
+                        <div className="border py-4 px-2 rounded-xl mt-4 bg-[#F7F5FD] w-[95%]">
+                            <p>On the free plan, you get access to our core AI features with some limitations.</p>
+
+                            <h6 className='font-bold'>✔ Limited AI queries per day</h6>
+                            <h6 className='font-bold'>✔ Access to basic AI models</h6>
+                            <h6 className='font-bold'>✔ Community support</h6>
+                            <h6 className='font-bold'>✖ No advanced customization</h6>
+
+                           <p> This plan is perfect for individuals who want to explore our AI platform.</p>
+
+                        </div>
+                    )
+                    }
+
                     {/* three */}
-                    <div className="border py-4 px-2 rounded-xl mt-4 bg-[#F7F5FD] w-[95%] ">
+                    <div onClick={() => setShow(!show)} className="border py-4 px-2 rounded-xl mt-4 bg-[#F7F5FD] w-[95%] ">
                         <h4 className='flex items-center justify-between font-bold'>Does the price go up as my team gets larger? <IoIosArrowDown /></h4>
                     </div>
+
+                    {show && (
+                        <div className="border py-4 px-2 rounded-xl mt-1 bg-[#F7F5FD] w-[95%] ">
+                            <p>The free trial gives you temporary access to premium features.</p><br />
+                            <h6 className='font-bold'>✔ Full access to advanced AI models</h6>
+                            <h6 className='font-bold'>✔ Higher request limits</h6>
+                            <h6 className='font-bold'>✔ Priority response speed</h6>
+
+                            <p>The trial lasts for 7 days and no credit card is required.</p>
+
+                        </div>
+                    )}
+
 
                     <div onClick={() => setToficc(!toficc)} className="border py-4 px-2 rounded-xl mt-4 bg-[#F7F5FD] w-[95%] flex items-center justify-between ">
                         <h4 className=' font-bold'>How can I cancel my subscription?  </h4>
@@ -49,7 +79,7 @@ const Frequently = () => {
                     </div>
                     {toficc && (
                         <div className="border py-4 px-2 rounded-xl mt-4 bg-[#F7F5FD] w-[95%]">
-                             <p>
+                            <p>
                                 You can cancel your subscription at any time.</p> <br />
                             <h6 className='font-bold '>✔ No long-term contracts</h6>
                             <br />

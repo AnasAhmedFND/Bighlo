@@ -23,7 +23,9 @@ const Project = () => {
                             sed do eiusmod tempor incididunt labore et
                             dolore magna aliqua.</p>
 
+                            <a href="https://ai.csrhub.blog/?gad_source=1&gad_campaignid=23160988984&gbraid=0AAAAAqLvV6Gl5EXRLfCAMTIhR7o_6CwVr&gclid=CjwKCAiAvaLLBhBFEiwAYCNTf4zmq9gSyzTqqKOp7c__YoMkpUFJg-QjHbrmRfV6XbMHmUrR7C9NPRoCsA4QAvD_BwE">
                             <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] cursor-pointer '>Read More</button>
+                            </a>
                     </div>
                 </article>
 
@@ -37,8 +39,10 @@ const Project = () => {
                         <p className='mt-2'>Lorem ipsum amet, consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt labore et
                             dolore magna aliqua.</p>
-
+                            
+                            <a href="https://ai.csrhub.blog/?gad_source=1&gad_campaignid=23160988984&gbraid=0AAAAAqLvV6Gl5EXRLfCAMTIhR7o_6CwVr&gclid=CjwKCAiAvaLLBhBFEiwAYCNTf4zmq9gSyzTqqKOp7c__YoMkpUFJg-QjHbrmRfV6XbMHmUrR7C9NPRoCsA4QAvD_BwE">
                             <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] cursor-pointer '>Read More</button>
+                            </a>
                     </div>
                 </article>
 
@@ -52,8 +56,9 @@ const Project = () => {
                         <p className='mt-2'>Lorem ipsum amet, consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt labore et
                             dolore magna aliqua.</p>
-
+                            <a href="https://ai.csrhub.blog/?gad_source=1&gad_campaignid=23160988984&gbraid=0AAAAAqLvV6Gl5EXRLfCAMTIhR7o_6CwVr&gclid=CjwKCAiAvaLLBhBFEiwAYCNTf4zmq9gSyzTqqKOp7c__YoMkpUFJg-QjHbrmRfV6XbMHmUrR7C9NPRoCsA4QAvD_BwE">
                             <button className='border px-5 py-2 bg-linear-60 from-[#03103D] to-[#0D8DFF] text-white rounded-full mt-4 relative top-[16px] cursor-pointer '>Read More</button>
+                            </a>
                     </div>
                 </article>
             </div>

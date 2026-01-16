@@ -17,7 +17,7 @@ const About_hero = (props) => {
 
             </div>
             {/* container about hero */}
-            <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px] ">
+            <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px]  mt-8 ">
                 {/* head text */}
                 <div className=" flex justify-between text-[#f0f5f4] ">
                     <p>Welcome to Bithlo for you analysis</p>
@@ -37,7 +37,7 @@ const About_hero = (props) => {
 
                     <ul className='flex items-center justify-between  w-[70%] rounded-full pl-5 bg-[#094477] text-white '>
                         <li><Link href={'/'} > Home </Link> </li>
-                        <li><Link href={'/about'} > Company </Link> </li>
+                        <li><Link href={'/about'} > Fashion </Link> </li>
                         <li>Services</li>
                         <li>Blog</li>
                         <li>Contact</li>
@@ -49,13 +49,30 @@ const About_hero = (props) => {
                 </nav>
 
                 {/*  Page title  */}
-                <div className="text-center flex flex-col justify-center items-center text-white mt-44 ">
-                    <h2 className='font-bold text-3xl'>{props.title} </h2>
-                    <div className=" flex justify-between  items-center  bg-blue-900 rounded-full  mt-6 w-[20%] ">
-                        <Link href={'/'} >
-                        <p className='px-8 border-r bg-[#090c68] py-2 rounded-l-full text-red-500 '>  Home </p>
-                        </Link>
-                        <p className='px-4'>{props.pageName} </p>
+                <div className="text-center flex  justify-center items-center text-white mt-4 ">
+                    {/* Left */}
+
+                    <div className="w-[40%] border border-white ">
+                        <img className='border rounded-full' src="/about/link.png" alt="t-shart" />
+                        <h2 className='font-bold text-3xl'>{props.title} </h2>
+                        <div className=" flex justify-between  items-center  bg-blue-900 rounded-full  mt-6 w-[20%] ">
+                            <Link href={'/'} >
+                                <p className='px-8 border-r bg-[#090c68] py-2 rounded-l-full text-red-500 '>  Home </p>
+                            </Link>
+                            <p className='px-4'>{props.pageName} </p>
+                        </div>
+
+                    </div>
+                    {/* Right */}
+                    <div className="w-[55%] flex justify-between border border-white ">
+                        <div className="flex  border ">
+                            <img className='w-[50px] h-[50px] rounded-full ' src="/about/hero/rifa.jpeg" alt="femail" />
+                            <h2 className=' font-bold'>RIFANAS FASHION</h2>
+
+                        </div>
+                        <img className='w-[300px] h-[320px] ' src="/about/hero/t-shart.png" alt="mans" />
+
+
                     </div>
                 </div>
 

@@ -3,6 +3,8 @@ import "./globals.css";
 
 import Footer from "@/Compunents/Footer";
 
+import ProductProvider from "./Context/ProductProvider";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,12 +23,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ProductProvider>
+          {children}
+
+        </ProductProvider>
+
         
-        {children}
-        <Footer/>
+
+        <Footer />
       </body>
     </html>
   );

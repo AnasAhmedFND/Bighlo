@@ -13,7 +13,7 @@ const Banner = () => {
                 <div className="absolute top-20 ml-4  ">
                     <h4 className='font-bold text-3xl'>Create your <br /> unique style</h4>
                     <p  className='text-[#7E7E7E]  mt-2 '>Free and easy way to create <br /> your ideas to life</p>
-                    <button className='border py-2 px-8 mt-4 bg-[#2EBB77] text-white rounded-2xl font-bold '>Shop Now</button>
+                    <button className='border py-2 px-8 mt-4 bg-[#2EBB77] text-white rounded-2xl font-bold cursor-pointer  '>Shop Now</button>
                 </div>
             </div>
         </div>

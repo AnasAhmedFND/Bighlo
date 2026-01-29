@@ -2,7 +2,7 @@
 import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+
 
 import { GrFacebookOption } from "react-icons/gr";
 import { FaPinterestP } from "react-icons/fa";
@@ -78,7 +78,7 @@ const About_hero = (props) => {
                     {/* Right */}
                     <div className="w-[55%] flex justify-end   h-[320px] text-white items-center ">
                         <div className="">
-                            <h2 className={`${macondo.className} text-3xl font-bold text-red-500 `}>RIFANAS FASHION </h2>
+                            <h2 className={`${macondo.className} text-4xl font-bold text-[#dff304]`}>RIFANAS FASHION </h2>
                             <h2 className='text-3xl font-bold'>Let's configure you own <br />
                                 print product</h2>
                             <p className='mt-2'>The easiest way to get your print as you want</p>

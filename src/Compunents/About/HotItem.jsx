@@ -84,15 +84,14 @@ const HotItem = () => {
                 <div className="flex  justify-between mt-2">
                     {/* left */}
                     <div className=" w-[48%] relative  ">
-                        <img className='h-[320px] w-full ' src="/about/benner/riftum.png" alt="banner" />
+                        <img className='h-[320px] w-full ' src="/about/benner/Tablist.png" alt="banner" />
                         <div className="absolute top-[80px] pl-8  ">
                             <h6 className='font-bold text-4xl'>10% off your <br />first order 👉➡</h6>
                             <p className='mt-2'>Free and easy way to bring <br />your ideas to life</p>
                             <button className='font-bold mt-4 border rounded-2xl py-2 px-4 bg-[#e2c6e29e] '>Shop Now</button>
 
                         </div>
-                        <img className='absolute top-[29px] right-0 ' src="/about/benner/link-br.png" alt="banner" />
-
+                       
                     </div>
                     {/* right */}
                     <div className=" w-[48%] relative ">
@@ -121,7 +120,7 @@ const HotItem = () => {
                     </div>
 
                     <div className="border rounded-t-xl w-[23%] text-center ">
-                        <img src="/about/benner/main1 (2).png " alt="man" />
+                        <img className='w-full' src="/about/benner/main1 (2).png " alt="man" />
                         <h6 className='font-bold mt-4'>Zone Sweatshirt</h6>
                         {
                             filterd.map((item) => (
@@ -133,7 +132,7 @@ const HotItem = () => {
                     </div>
 
                     <div className="border rounded-t-xl  w-[23%] text-center ">
-                        <img src="/about/benner/main1 (3).png " alt="man" />
+                        <img className='w-full' src="/about/benner/main1 (3).png " alt="man" />
                         <h6 className='font-bold mt-4'>Zone Sweatshirt</h6>
                         {
                             filterd.map((item) => (
@@ -145,7 +144,7 @@ const HotItem = () => {
                     </div>
 
                     <div className="border rounded-t-xl w-[23%] text-center ">
-                        <img src="/about/benner/main1 (4).png " alt="man" />
+                        <img className='w-full rounded-t-xl' src="/about/benner/main1 (4).png " alt="man" />
                         <h6 className='font-bold mt-4'>Zone Sweatshirt</h6>
                         {
                             filterd.map((item) => (

@@ -12,6 +12,9 @@ import { IoIosCall } from "react-icons/io";
 import { IoMdSearch } from "react-icons/io";
 import Link from 'next/link';
 import { Macondo } from 'next/font/google';
+import { RiShoppingCartLine } from "react-icons/ri";
+import { FaRegHeart } from "react-icons/fa6";
+
 const macondo = Macondo({
     subsets:['latin'],
     weight:['400',]
@@ -23,21 +26,33 @@ const About_hero = (props) => {
     return (
         <section className=''>
             {/* background img */}
-            <div className="relative ">
+            <div className="relative  ">
                 <img className='w-full h-[500px] ' src="/about/ab3_bg.jpg" alt="background" />
 
             </div>
             {/* container about hero */}
-            <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px]  mt-8 ">
+            <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px]  mt-8  ">
                 {/* head text */}
                 <div className=" flex justify-between text-[#f0f5f4] ">
+                    <div className="flex gap-3 items-center">
                     <p>Welcome to Bithlo for you analysis</p>
-                    <div className="flex items-center gap-2">
-                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center ' ><GrFacebookOption /></p>
-                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center ' ><FaPinterestP /></p>
-                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center ' ><RiTwitterFill /></p>
-                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center ' ><TbWorld /></p>
-                        <p className='text-2xl'><IoIosCall /> </p>
+                    <div className="relative   ">
+                        <p className='border-2 font-bold p-1 rounded-full '><RiShoppingCartLine /></p>
+                        <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
+
+                    </div>
+                    <div className="relative">
+                        <p className='border-2 font-bold p-1 rounded-full  ml-3 '><FaRegHeart /></p>
+                         <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
+                    </div>
+
+                    </div>
+                    <div className="flex items-center gap-2 ">
+                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center cursor-pointer ' ><GrFacebookOption /></p>
+                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center cursor-pointer ' ><FaPinterestP /></p>
+                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center cursor-pointer ' ><RiTwitterFill /></p>
+                        <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center cursor-pointer ' ><TbWorld /></p>
+                        <p title='+880 12345678' className='text-2xl cursor-pointer'><IoIosCall /> </p>
                         <small> Start your project +00 888 27 240</small>
                     </div>
                 </div>

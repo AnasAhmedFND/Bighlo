@@ -16,12 +16,12 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa6";
 
 const macondo = Macondo({
-    subsets:['latin'],
-    weight:['400',]
+    subsets: ['latin'],
+    weight: ['400',]
 
-}) 
+})
 const About_hero = (props) => {
-    
+
 
     return (
         <section className=''>
@@ -35,16 +35,17 @@ const About_hero = (props) => {
                 {/* head text */}
                 <div className=" flex justify-between text-[#f0f5f4] ">
                     <div className="flex gap-3 items-center">
-                    <p>Welcome to Bithlo for you analysis</p>
-                    <div className="relative   ">
-                        <p className='border-2 font-bold p-1 rounded-full '><RiShoppingCartLine /></p>
-                        <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
-
-                    </div>
-                    <div className="relative">
-                        <p className='border-2 font-bold p-1 rounded-full  ml-3 '><FaRegHeart /></p>
-                         <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
-                    </div>
+                        <p>Welcome to Bithlo for you analysis</p>
+                        <Link href={'/cart'}>
+                            <div className="relative cursor-pointer  ">
+                                <p className='border-2 font-bold p-1 rounded-full '><RiShoppingCartLine /></p>
+                                <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
+                            </div>
+                        </Link>
+                        <div className="relative">
+                            <p className='border-2 font-bold p-1 rounded-full  ml-3 '><FaRegHeart /></p>
+                            <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
+                        </div>
 
                     </div>
                     <div className="flex items-center gap-2 ">
@@ -80,7 +81,7 @@ const About_hero = (props) => {
 
                     <div className="w-[40%]  h-[320px]  border-r-4  flex flex-col items-center  ">
                         <img className='border rounded-full' src="/about/link.png" alt="t-shart" />
-                           
+
                         <h2 className='font-bold text-3xl'>{props.title} </h2>
                         <div className=" flex justify-between  items-center  bg-blue-900 rounded-full  mt-6  border ">
                             <Link href={'/'} >

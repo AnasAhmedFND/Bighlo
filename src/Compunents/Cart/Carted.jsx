@@ -1,10 +1,19 @@
 "use clinte"
+import { Felipa } from 'next/font/google';
 import Link from 'next/link'
 import React from 'react'
 import { IoMdSearch } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { IoIosArrowRoundBack } from "react-icons/io";
+
+const felipap  = Felipa({
+    subsets:['latin'],
+    weight:['400', ]
+
+})
+
 
 const Carted = () => {
     return (
@@ -51,18 +60,18 @@ const Carted = () => {
                 </div>
 
                 {/*  shopping itmes place */}
-                <div className="flex justify-between pb-10">
+                <div className="flex justify-between pb-10 ">
                     {/* left */}
                     <div className="w-[68%] border ">
-                        <h4 className='border-b-2 pb-5 '> Shopping cart</h4>
+                        <h4 className={`${felipap.className}  pb-5 font-bold text-5xl bg-[#F56540] py-4 text-white px-4 `} > Shopping cart</h4>
 
-                        <p>Shopping cart</p>
+                        <p className='font-bold mt-2'>Shopping cart</p>
                         <p>You have 3 items in your cart</p>
                         
                         {/* items */}
-                        <div className="border mt-4 pb-10">
+                        <div className=" mt-8 pb-10 ">
                             {/* item-1 */}
-                            <div className="flex border mt-2">
+                            <div className="flex border-t pt-2  mt-2">
                                 <div className="flex items-center w-[49%] gap-4 ">
                                     <img className='w-[100px] border  ' src="/cart/model.png" alt="" />
                                     <p className='font-bold'>Title</p>
@@ -72,19 +81,19 @@ const Carted = () => {
                                     <div className="flex items-center gap-2">
                                         <p className='text-xl'>1</p>
                                         <div className="">
-                                            <p><IoMdArrowDropup /></p>
-                                            <p><IoMdArrowDropdown /></p>
+                                            <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropup /></p>
+                                            <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropdown /></p>
                                         </div>
                                     </div>
 
                                     <p>$Price</p>
 
-                                    <p className='text-xl '><RiDeleteBin6Line /></p>
+                                    <p className='text-xl cursor-pointer hover:text-[#F56540] '><RiDeleteBin6Line /></p>
                                 </div>
                             </div>
 
                              {/* item-2 */}
-                            <div className="flex border mt-2">
+                            <div className="flex border-t pt-2  mt-2">
 
                                 <div className="flex items-center w-[49%] gap-4 ">
                                     <img className='w-[100px] border  ' src="/cart/model.png" alt="" />
@@ -110,7 +119,7 @@ const Carted = () => {
 
                              {/* item-3 */}
 
-                            <div className="flex border mt-2">
+                            <div className="flex border-t pt-2  mt-2">
                                 <div className="flex items-center w-[49%] gap-4 ">
                                     <img className='w-[100px] border  ' src="/cart/model.png" alt="" />
                                     <p className='font-bold'>Title</p>
@@ -129,6 +138,12 @@ const Carted = () => {
 
                                     <p className='text-xl '><RiDeleteBin6Line /></p>
                                 </div>
+                            </div>
+
+
+                            <div className="flex justify-between  py-4 px-10 mt-8 ">
+                                <button className='font-bold border rounded-full py-2 px-8 text-2xl bg-[#F56540] text-white '>Update cart </button>
+                                <button className='font-bold border rounded-full py-2 px-8 text-2xl flex items-center ' > <IoIosArrowRoundBack /> Continue shopping </button>
                             </div>
 
 

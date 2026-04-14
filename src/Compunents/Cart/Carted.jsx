@@ -8,9 +8,9 @@ import { IoMdArrowDropup } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-const felipap  = Felipa({
-    subsets:['latin'],
-    weight:['400', ]
+const felipap = Felipa({
+    subsets: ['latin'],
+    weight: ['400',]
 
 })
 
@@ -18,28 +18,28 @@ const felipap  = Felipa({
 const Carted = () => {
     return (
         <section className=' bg-[#E5F4ED]  '>
-                <div className="bg-[#050b7b]">
-                    <div className=" container mx-auto py-5">
-                        <nav className=' flex items-center justify-between mt-2 '>
-                            <img className='' src="/home/web_logo.png" alt="logo" />
+            <div className="bg-[#050b7b]">
+                <div className=" container mx-auto py-5">
+                    <nav className=' flex items-center justify-between mt-2 '>
+                        <img className='' src="/home/web_logo.png" alt="logo" />
 
-                            <ul className='flex items-center justify-between  w-[70%] rounded-full pl-5 bg-[#094477] text-white '>
-                                <li><Link href={'/'} > Home </Link> </li>
-                                <li><Link href={'/about'} > Fashion </Link> </li>
-                                <li>Services</li>
+                        <ul className='flex items-center justify-between  w-[70%] rounded-full pl-5 bg-[#094477] text-white '>
+                            <li><Link href={'/'} > Home </Link> </li>
+                            <li><Link href={'/about'} > Fashion </Link> </li>
+                            <li>Services</li>
 
-                                <li>Blog</li>
-                                <li>Contact</li>
-                                <li className='text-2xl '><IoMdSearch /></li>
-                                <li className='border bg-white text-black py-3 px-5 rounded-full'>
-                                    <button>Get in Touch</button>
-                                </li>
-                            </ul>
-                        </nav>
-
-                    </div>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                            <li className='text-2xl '><IoMdSearch /></li>
+                            <li className='border bg-white text-black py-3 px-5 rounded-full'>
+                                <button>Get in Touch</button>
+                            </li>
+                        </ul>
+                    </nav>
 
                 </div>
+
+            </div>
             <div className="container mx-auto">
                 <div className=" border flex justify-between items-center  ">
 
@@ -67,7 +67,7 @@ const Carted = () => {
 
                         <p className='font-bold mt-2'>Shopping cart</p>
                         <p>You have 3 items in your cart</p>
-                        
+
                         {/* items */}
                         <div className=" mt-8 pb-10 ">
                             {/* item-1 */}
@@ -86,13 +86,13 @@ const Carted = () => {
                                         </div>
                                     </div>
 
-                                    <p>$Price</p>
+                                    <p>$25</p>
 
                                     <p className='text-xl cursor-pointer hover:text-[#F56540] '><RiDeleteBin6Line /></p>
                                 </div>
                             </div>
 
-                             {/* item-2 */}
+                            {/* item-2 */}
                             <div className="flex border-t pt-2  mt-2">
 
                                 <div className="flex items-center w-[49%] gap-4 ">
@@ -113,11 +113,11 @@ const Carted = () => {
 
                                     <p className='text-xl '><RiDeleteBin6Line /></p>
                                 </div>
-                           
+
                             </div>
 
 
-                             {/* item-3 */}
+                            {/* item-3 */}
 
                             <div className="flex border-t pt-2  mt-2">
                                 <div className="flex items-center w-[49%] gap-4 ">
@@ -149,8 +149,47 @@ const Carted = () => {
 
                         </div>
                     </div>
-                    <div className="w-[30%] border ">
-                        card details
+
+                    {/* Right div//////////////// */}
+
+                    <div className="w-[30%] border text-white " style={{ backgroundImage: "url('/cart/bg-cart.png')", }} >
+                        <div className="z-20 px-4 text-center pt-5 bg-[#101141c6] h-full  ">
+
+                            <h3 className='text-4xl text-center font-bold mt-5 '>PAYMENT INFO</h3>
+                            <h5 className='font-semibold text-3xl mt-5 '>Discunt / Promo Code</h5>
+
+                            <div className="flex border  rounded-full justify-between items-center mt-8 font-bold ">
+                                <p className='pl-4'>Coupn code</p>
+                                <button className='border px-10 bg-blue-500 rounded-full py-4 '>Apply</button>
+                            </div>
+
+                            <h3 className='mt-10 text-4xl'>Cart totals</h3>
+                            <div className="flex gap-10 font-bold mt-14 border-b-2 pb-5">
+                                <div className="text-end ">
+                                    <p>Subtotal</p>
+                                    <p className='mt-4'>Total</p>
+                                </div>
+
+                                <div className="">
+                                    <p>$289</p>
+                                    <p className='mt-4'>$291</p>
+                                </div>
+
+                            </div>
+
+                            <div className="flex gap-4 mt-5">
+                                <p>Shipment :</p>
+                                
+                                    <p> Pickup (Store Location): $2</p>
+                                   
+                                
+                            </div>
+
+
+                        </div>
+
+
+
                     </div>
                 </div>
 

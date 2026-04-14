@@ -1,4 +1,5 @@
 "use client"
+import { ProductContext } from '@/app/Context/ProductProvider';
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { IoMdSearch } from "react-icons/io";
@@ -26,6 +27,8 @@ const Navbar = () => {
     <section className='container mx-auto relative top-5 '>
       
         <nav className='flex justify-between items-center ' >
+        <meta name='robots' content='index, follow' />
+        <meta property='og:title' content={ProductContext.name } />
           <img src="/home/web_logo.png" alt="logo" />
           <div className="container mx-auto flex justify-between items-center border w-[70%] rounded-2xl bg-[#03103D]   ">
             <ul className='flex gap-16 py-2 px-5 text-white   '>

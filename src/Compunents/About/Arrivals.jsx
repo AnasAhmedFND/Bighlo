@@ -45,6 +45,8 @@ const Arrivals = () => {
     }
 
 
+
+
     return (
         <section className='container mx-auto py-10 '>
             <div className="flex gap-3 items-center ">

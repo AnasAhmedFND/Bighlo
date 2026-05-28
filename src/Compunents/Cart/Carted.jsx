@@ -47,6 +47,11 @@ const Carted = () => {
     let handleCartAll = () => {
         dispatch(clearCart())
     }
+
+    // Total price use reduce....................................................
+    const totalPrice = cartData.reduce((total, item) => {
+        return total + item.price * item.qty ;
+    }, 0)
     
 
 
@@ -76,7 +81,7 @@ const Carted = () => {
 
             </div>
             <div className="container mx-auto">
-                <div className=" border flex justify-between items-center  ">
+                <div className="  flex justify-between items-center  ">
 
                     <div className="w-[45%] ">
                         <h2 className='flex justify-center text-4xl font-bold text-red-500 '>Cart_Page 🔰</h2>
@@ -101,7 +106,7 @@ const Carted = () => {
                         <h4 className={`${felipap.className}  pb-5 font-bold text-5xl bg-[#F56540] py-4 text-white px-4 `} > Shopping cart</h4>
 
                         <p className='font-bold mt-2'>Shopping cart</p>
-                        <p>You have 3 items in your cart</p>
+                        <p>You have_ <span className='font-bold text-xl'> {cartData.length} </span> items in your cart</p>
 
                         {/* items-All */}
                         <div className=" mt-8 pb-10 ">
@@ -164,11 +169,15 @@ const Carted = () => {
                                 </div>
 
                                 <div className="">
-                                    <p>$289</p>
-                                    <p className='mt-4'>$291</p>
+                                    <p>$ {totalPrice.toFixed(2)+2 } </p>
+                                    <p className='mt-4'>$ {totalPrice.toFixed(2)} </p>
                                 </div>
 
+                                <h6>Total Quantity : {cartData.length} </h6>
+
                             </div>
+
+
 
                             <div className="flex gap-4 mt-5">
                                 <p>Shipment :</p>

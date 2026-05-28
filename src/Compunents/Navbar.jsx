@@ -3,6 +3,7 @@ import { ProductContext } from '@/app/Context/ProductProvider';
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { IoMdSearch } from "react-icons/io";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const Navbar = () => {
 
@@ -37,6 +38,8 @@ const Navbar = () => {
                 <li>Services</li>
                 <li>Works</li>
                 <li>Blog</li>
+                <li className='font-bold text-2xl cursor-pointer ' title='Buy_Now'  > <Link href={'/cart'} > <MdOutlineShoppingCart />
+                </Link> </li>
             </ul>
             <form onSubmit={heandleSearch} className='flex justify-between items-center gap-2' action="">
             {show && (

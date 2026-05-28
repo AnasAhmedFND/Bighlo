@@ -1,10 +1,16 @@
 "use client"
 
 import { ProductContext } from '@/app/Context/ProductProvider';
+import { addToCart } from '@/app/Redux/cartSlice';
+
+
 import { Playpen_Sans } from 'next/font/google';
 import React, { useContext, useState } from 'react'
 import { RiMenuFold2Fill  } from "react-icons/ri";
 import { RiMenuFoldFill } from "react-icons/ri";
+import { useDispatch } from 'react-redux';
+
+
 
 const playpen = Playpen_Sans({
     subsets : ["latin"],
@@ -29,6 +35,14 @@ const Arrivals = () => {
     });
 
     const filterProduct = shwoCategory ? product.filter((item) => item.category === shwoCategory) : product;
+
+
+    // add to cart product/////////////////////////////////////////////////
+    let dispatch = useDispatch()
+
+    const handleAddToCart = (product) => {
+        dispatch(addToCart({...product, qty: 1}))
+    }
 
 
     return (
@@ -56,10 +70,12 @@ const Arrivals = () => {
 
             <div className="flex justify-between mt-5">
                 {filterProduct.slice(0, 4).map((item) => (
-                <div key={item.id} className="w-[23%]  text-center font-bold  ">
+                <div key={item.id} className="w-[23%]  text-center font-bold border-t  rounded-2xl ">
+                    
                     <img className='rounded-xl' src={item.thumbnail} alt={item.title} />
                     <h6 className='mt-4'>{item.title}</h6>
                     <p>${item.price}</p>
+                    <button onClick={() => handleAddToCart(item)} className='mt-2 bg-green-400 text-white font-bold text-xl w-full py-2 cursor-pointer '>Add To Cart</button>
                 </div>
 
                 )) }

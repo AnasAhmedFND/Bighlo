@@ -1,4 +1,4 @@
-"use clinte"
+"use client"
 import { Felipa } from 'next/font/google';
 import Link from 'next/link'
 import React from 'react'
@@ -7,6 +7,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { useSelector } from 'react-redux';
 
 const felipap = Felipa({
     subsets: ['latin'],
@@ -14,8 +15,14 @@ const felipap = Felipa({
 
 })
 
-
 const Carted = () => {
+
+    const cartData = useSelector((state) => state.cartItemSlice.cartItems );
+
+// console.log(buyData);
+
+
+
     return (
         <section className=' bg-[#E5F4ED]  '>
             <div className="bg-[#050b7b]">
@@ -68,85 +75,41 @@ const Carted = () => {
                         <p className='font-bold mt-2'>Shopping cart</p>
                         <p>You have 3 items in your cart</p>
 
-                        {/* items */}
+                        {/* items-All */}
                         <div className=" mt-8 pb-10 ">
-                            {/* item-1 */}
-                            <div className="flex border-t pt-2  mt-2">
-                                <div className="flex items-center w-[49%] gap-4 ">
-                                    <img className='w-[100px] border  ' src="/cart/model.png" alt="" />
-                                    <p className='font-bold'>Title</p>
-                                </div>
-
-                                <div className="flex justify-between items-center w-[50%] ">
-                                    <div className="flex items-center gap-2">
-                                        <p className='text-xl'>1</p>
-                                        <div className="">
-                                            <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropup /></p>
-                                            <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropdown /></p>
-                                        </div>
+                           {cartData.map((item)=> (
+                                <div className="flex border-t pt-2  mt-2">
+                                    <div className="flex items-center w-[49%] gap-4 ">
+                                        <img className='w-[100px] border  ' src={item.thumbnail} alt="" />
+                                        <p className='font-bold'>{item.title}</p>
                                     </div>
 
-                                    <p>$25</p>
-
-                                    <p className='text-xl cursor-pointer hover:text-[#F56540] '><RiDeleteBin6Line /></p>
-                                </div>
-                            </div>
-
-                            {/* item-2 */}
-                            <div className="flex border-t pt-2  mt-2">
-
-                                <div className="flex items-center w-[49%] gap-4 ">
-                                    <img className='w-[100px] border  ' src="/cart/model.png" alt="" />
-                                    <p className='font-bold'>Title</p>
-                                </div>
-
-                                <div className="flex justify-between items-center w-[50%] ">
-                                    <div className="flex items-center gap-2">
-                                        <p className='text-xl'>1</p>
-                                        <div className="">
-                                            <p><IoMdArrowDropup /></p>
-                                            <p><IoMdArrowDropdown /></p>
+                                    <div className="flex justify-between items-center w-[50%] ">
+                                        <div className="flex items-center gap-2">
+                                            <p className='text-xl'>{item.qty}</p>
+                                            <div className="">
+                                                <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropup /></p>
+                                                <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropdown /></p>
+                                            </div>
                                         </div>
+
+                                        <p>$ {item.price} </p>
+
+                                        <p className='text-xl cursor-pointer hover:text-[#F56540] '><RiDeleteBin6Line /></p>
                                     </div>
-
-                                    <p>$Price</p>
-
-                                    <p className='text-xl '><RiDeleteBin6Line /></p>
                                 </div>
 
-                            </div>
+                           ))}
+                          
+
+                        </div>
 
 
-                            {/* item-3 */}
 
-                            <div className="flex border-t pt-2  mt-2">
-                                <div className="flex items-center w-[49%] gap-4 ">
-                                    <img className='w-[100px] border  ' src="/cart/model.png" alt="" />
-                                    <p className='font-bold'>Title</p>
-                                </div>
-
-                                <div className="flex justify-between items-center w-[50%] ">
-                                    <div className="flex items-center gap-2">
-                                        <p className='text-xl'>1</p>
-                                        <div className="">
-                                            <p><IoMdArrowDropup /></p>
-                                            <p><IoMdArrowDropdown /></p>
-                                        </div>
-                                    </div>
-
-                                    <p>$Price</p>
-
-                                    <p className='text-xl '><RiDeleteBin6Line /></p>
-                                </div>
-                            </div>
-
-
-                            <div className="flex justify-between  py-4 px-10 mt-8 ">
-                                <button className='font-bold border rounded-full py-2 px-8 text-2xl bg-[#F56540] text-white '>Update cart </button>
-                                <button className='font-bold border rounded-full py-2 px-8 text-2xl flex items-center ' > <IoIosArrowRoundBack /> Continue shopping </button>
-                            </div>
-
-
+                        {/* Bottm Buttons */}
+                        <div className="flex justify-between  py-4 px-10 mt-8 ">
+                            <button className='font-bold border rounded-full py-2 px-8 text-2xl bg-[#F56540] text-white '>Update cart </button>
+                            <button className='font-bold border rounded-full py-2 px-8 text-2xl flex items-center ' > <IoIosArrowRoundBack /> Continue shopping </button>
                         </div>
                     </div>
 
@@ -179,10 +142,10 @@ const Carted = () => {
 
                             <div className="flex gap-4 mt-5">
                                 <p>Shipment :</p>
-                                
-                                    <p> Pickup (Store Location): $2</p>
-                                   
-                                
+
+                                <p> Pickup (Store Location): $2</p>
+
+
                             </div>
 
 

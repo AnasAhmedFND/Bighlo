@@ -7,7 +7,8 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearCart, deleteItems, dicriment, increment } from '@/app/Redux/cartSlice';
 
 const felipap = Felipa({
     subsets: ['latin'],
@@ -17,9 +18,36 @@ const felipap = Felipa({
 
 const Carted = () => {
 
+    // addToCarts every items..............................................
     const cartData = useSelector((state) => state.cartItemSlice.cartItems );
+    // console.log(buyData);
 
-// console.log(buyData);
+    // increment Plus..........................................................
+
+    let dispatch = useDispatch() 
+
+    let handleIncrementProduct =  (item) => { 
+        dispatch(increment(item))
+        
+    };
+
+    // dicriment Muinus..........................................................
+    let handleDicrement = (item) => {
+        dispatch(dicriment(item))
+    }
+
+
+    // Delete Product.......................................................
+    let handleDeleteProduct = (item) => {
+        dispatch(deleteItems(item))
+    }
+
+
+    // Clier Cart all items...................................................
+    let handleCartAll = () => {
+        dispatch(clearCart())
+    }
+    
 
 
 
@@ -88,14 +116,14 @@ const Carted = () => {
                                         <div className="flex items-center gap-2">
                                             <p className='text-xl'>{item.qty}</p>
                                             <div className="">
-                                                <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropup /></p>
-                                                <p className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropdown /></p>
+                                                <p onClick={() => handleIncrementProduct(index) } className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropup /></p>
+                                                <p onClick={() => handleDicrement (index) } className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropdown /></p>
                                             </div>
                                         </div>
 
                                         <p>$ {item.price} </p>
 
-                                        <p className='text-xl cursor-pointer hover:text-[#F56540] '><RiDeleteBin6Line /></p>
+                                        <p onClick={() => handleDeleteProduct(item) } className='text-xl cursor-pointer hover:text-[#F56540] '><RiDeleteBin6Line /></p>
                                     </div>
                                 </div>
 
@@ -108,8 +136,10 @@ const Carted = () => {
 
                         {/* Bottm Buttons */}
                         <div className="flex justify-between  py-4 px-10 mt-8 ">
-                            <button className='font-bold border rounded-full py-2 px-8 text-2xl bg-[#F56540] text-white '>Update cart </button>
-                            <button className='font-bold border rounded-full py-2 px-8 text-2xl flex items-center ' > <IoIosArrowRoundBack /> Continue shopping </button>
+                            <button onClick={ handleCartAll } className='font-bold border rounded-full py-2 px-8 text-2xl bg-[#F56540] text-white cursor-pointer '>Update cart </button>
+                            <Link href={'/about'} >
+                            <button className='font-bold border rounded-full py-2 px-8 text-2xl flex items-center cursor-pointer ' > <IoIosArrowRoundBack /> Continue shopping </button>
+                            </Link>
                         </div>
                     </div>
 

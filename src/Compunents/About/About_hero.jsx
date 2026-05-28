@@ -14,14 +14,17 @@ import Link from 'next/link';
 import { Macondo } from 'next/font/google';
 import { RiShoppingCartLine } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa6";
+import { useSelector } from 'react-redux';
 
 const macondo = Macondo({
     subsets: ['latin'],
-    weight: ['400',]
+    weight: ['400']
 
 })
 const About_hero = (props) => {
-
+     const cartItemNumber = useSelector((state) => state.cartItemSlice.cartItems );
+    
+    
 
     return (
         <section className=''>
@@ -30,18 +33,21 @@ const About_hero = (props) => {
                 <img className='w-full h-[500px] ' src="/about/ab3_bg.jpg" alt="background" />
 
             </div>
-            {/* container about hero */}
+            {/* container about hero........................................... */}
+
             <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px]  mt-8  ">
-                {/* head text */}
+                {/* head text & icons .................................................. */}
                 <div className=" flex justify-between text-[#f0f5f4] ">
                     <div className="flex gap-3 items-center">
                         <p>Welcome to Bithlo for you analysis</p>
+                        {/* cart lenth icon........................................  */}
                         <Link href={'/cart'}>
                             <div className="relative cursor-pointer  ">
                                 <p className='border-2 font-bold p-1 rounded-full '><RiShoppingCartLine /></p>
-                                <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
+                                <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '> {cartItemNumber.length } </p>
                             </div>
                         </Link>
+                        {/* Heart lenth icon.......................................................... */}
                         <div className="relative">
                             <p className='border-2 font-bold p-1 rounded-full  ml-3 '><FaRegHeart /></p>
                             <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { IoMdSearch } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
@@ -24,6 +25,11 @@ const Navbar = () => {
     setShow(!show)
   }
 
+  const cartNumber = useSelector((state) => state.cartItemSlice.cartItems )
+  
+  
+
+
   return (
     <section className='container mx-auto relative top-5 '>
       
@@ -38,8 +44,13 @@ const Navbar = () => {
                 <li>Services</li>
                 <li>Works</li>
                 <li>Blog</li>
+                <div className="flex relative ">
                 <li className='font-bold text-2xl cursor-pointer ' title='Buy_Now'  > <Link href={'/cart'} > <MdOutlineShoppingCart />
                 </Link> </li>
+
+                <p className='w-[20px] h-[20px] bg-red-500 flex justify-center items-center text-white border rounded-full absolute t-0 left-4 ' >{cartNumber.length}  </p>
+
+                </div>
             </ul>
             <form onSubmit={heandleSearch} className='flex justify-between items-center gap-2' action="">
             {show && (

@@ -25,21 +25,21 @@ const Carted = () => {
     // increment Plus..........................................................
 
     let dispatch = useDispatch() 
-
-    let handleIncrementProduct =  (item) => { 
+    
+    let handleIncrement =  (item) => { 
         dispatch(increment(item))
         
     };
 
     // dicriment Muinus..........................................................
     let handleDicrement = (item) => {
-        dispatch(dicriment(item))
+        dispatch(dicriment(item) )
     }
 
 
     // Delete Product.......................................................
     let handleDeleteProduct = (item) => {
-        dispatch(deleteItems(item))
+        dispatch(deleteItems(item) )
     }
 
 
@@ -52,6 +52,10 @@ const Carted = () => {
     const totalPrice = cartData.reduce((total, item) => {
         return total + item.price * item.qty ;
     }, 0)
+
+    const subTotal = (totalPrice + 2 );
+
+
     
 
 
@@ -112,19 +116,24 @@ const Carted = () => {
                         <div className=" mt-8 pb-10 ">
                            {cartData.map((item)=> (
                                 <div className="flex border-t pt-2  mt-2">
+                                    {/* img and titles............................  */}
                                     <div className="flex items-center w-[49%] gap-4 ">
                                         <img className='w-[100px] border  ' src={item.thumbnail} alt="" />
                                         <p className='font-bold'>{item.title}</p>
                                     </div>
 
+                                    {/* increment & dicrement icons ..........................*/}
+
                                     <div className="flex justify-between items-center w-[50%] ">
                                         <div className="flex items-center gap-2">
                                             <p className='text-xl'>{item.qty}</p>
                                             <div className="">
-                                                <p onClick={() => handleIncrementProduct(index) } className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropup /></p>
-                                                <p onClick={() => handleDicrement (index) } className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropdown /></p>
+                                                <p onClick={() => handleIncrement(index) } className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropup /></p>
+                                                <p onClick={() => handleDicrement(index) } className='cursor-pointer hover:text-[#F56540] '><IoMdArrowDropdown /></p>
                                             </div>
                                         </div>
+
+                                        {/* price and delete tag ///.......//////.............*/}
 
                                         <p>$ {item.price} </p>
 
@@ -169,7 +178,7 @@ const Carted = () => {
                                 </div>
 
                                 <div className="">
-                                    <p>$ {totalPrice.toFixed(2)+2 } </p>
+                                    <p>$ {subTotal.toFixed(2)  } </p>
                                     <p className='mt-4'>$ {totalPrice.toFixed(2)} </p>
                                 </div>
 
@@ -186,6 +195,9 @@ const Carted = () => {
 
 
                             </div>
+
+
+                            <button className='border px-10 bg-green-400 rounded-full py-2 text-2xl mt-[70px] cursor-pointer  '><Link href={'/payment'} >PAYMENT NOW.. </Link> </button>
 
 
                         </div>

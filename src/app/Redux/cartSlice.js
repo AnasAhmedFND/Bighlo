@@ -25,14 +25,14 @@ export const cartSlice = createSlice({
     },
 
     increment: (state, action) =>  {
-      state.cartItems[action, payload].qty += 1;      
+      state.cartItems[action.payload].qty += 1;      
         localStorage.setItem("cart", JSON.stringify(state.cartItems))
 
     },
 
     dicriment: (state, action) => {
-      if(state.cartItems[action, payload].qty !== 1){
-        state.cartItems[action, payload].qty -= 1;
+      if(state.cartItems[action.payload].qty !== 1){
+        state.cartItems[action.payload].qty -= 1;
       }
       localStorage.setItem("cart", JSON.stringify(state.cartItems))
 

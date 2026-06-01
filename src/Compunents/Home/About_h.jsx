@@ -8,15 +8,15 @@ const jost = Jost({
 
 const About_h = () => {
     return (
-        <section className=' container mx-auto pt-20'>
+        <section className=' container mx-auto md:pt-20 mt-10 md:px-0 px-2'>
             {/* container */}
-            <div className="flex justify-between pb-5">
-                <div className=" w-[48%] ">
+            <div className="md:flex justify-between pb-5">
+                <div className=" md:w-[48%] ">
                     <img src="/home/h-about.png" alt="robot" />
                 </div>
 
                 {/* right */}
-                <div className=" w-[48%] ">
+                <div className=" md:w-[48%] ">
                     <p className='mt-14 text-blue-400 '>ABOUT COMPANY</p>
                     
                     <h3 className={`${jost.className} font-bold text-2xl mt-2 `}>Mission is to bring force of <br />
@@ -36,23 +36,23 @@ const About_h = () => {
             </div>
 
             {/* tocan items */}
-            <div className="flex w-[60%] mx-auto border-t py-5 justify-between ">
-                <div className="flex items-center gap-2">
+            <div className="md:flex md:w-[60%] mx-auto border-t py-5 justify-between ">
+                <div className="flex items-center md:gap-2  gap-5 md:border-none border-b md:mt-0 mt-2 ">
                     <h4 className='font-bold text-4xl '>2.5k </h4>
                     <p>Completed <br /> Work</p>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center md:gap-2  gap-5 md:border-none border-b md:mt-0 mt-2 ">
                     <h4 className='font-bold text-4xl '>1.7k </h4>
                     <p>Business <br /> Covered</p>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center md:gap-2  gap-5 md:border-none border-b md:mt-0 mt-2 ">
                     <h4 className='font-bold text-4xl '>375 </h4>
                     <p>Expert <br /> Scientists</p>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center md:gap-2  gap-5 md:border-none border-b md:mt-0 mt-2 ">
                     <h4 className='font-bold text-4xl '>3.5m </h4>
                     <p>Happy <br /> Customers</p>
                 </div>

@@ -13,10 +13,10 @@ const jost = Jost({
 const Technology = () => {
 
   return (
-    <section className='container mx-auto border '>
-      <div className="flex  justify-center">
+    <section className='container mx-auto  md:px-0 px-2 '>
+      <div className="md:flex md:justify-center">
         {/* left div */}
-        <div className=" w-[40%] ">
+        <div className=" md:w-[40%] ">
           <h5 className='text-[#783f78] font-bold '>TECNOLOGY</h5>
           <h3 className={`${jost.className} text-3xl font-bold mt-4  `} >Any enough advanced <br />
             technology is unclear <br />
@@ -42,9 +42,9 @@ const Technology = () => {
         </div>
 
         {/* Right div */}
-        <div className="flex gap-4 w-[40%]  ">
+        <div className="flex gap-4 md:w-[40%] md:mt-0 mt-2  ">
           {/* card-1 */}
-          <div className=" w-[40%] h-[310px]  p-2 relative rounded-md  "  >
+          <div className=" md:w-[40%] h-[310px]  p-2 relative rounded-md  "  >
             <img src="/home/tac1.png" alt="ruboot" />
             <h5 className='font-bold  mt-4 '>Video Vision</h5>
             <p className='mt-4'>Simple easy distinguish when our power right.</p>
@@ -52,7 +52,7 @@ const Technology = () => {
           </div>
 
           {/* card-2 */}
-           <div className=" w-[40%] h-[310px]  p-2 relative rounded-md  "  >
+           <div className=" md:w-[40%] h-[310px]  p-2 relative rounded-md  "  >
             <img src="/home/tac2.png" alt="ruboot" />
             <h5 className='font-bold  mt-4 '>Computer Vision</h5>
             <p className='mt-4'>Simple easy distinguish when our power right.</p>

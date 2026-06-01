@@ -13,7 +13,7 @@ const jost = Jost({
 const Technology = () => {
 
   return (
-    <section className='container mx-auto  '>
+    <section className='container mx-auto border '>
       <div className="flex  justify-center">
         {/* left div */}
         <div className=" w-[40%] ">

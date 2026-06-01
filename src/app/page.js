@@ -7,7 +7,7 @@ import Support from "@/Compunents/Home/Support";
 import Team from "@/Compunents/Home/Team";
 import Technology from "@/Compunents/Home/Technology";
 import Navbar from "@/Compunents/Navbar";
-import Image from "next/image";
+
 
 export default function Home() {
   return (

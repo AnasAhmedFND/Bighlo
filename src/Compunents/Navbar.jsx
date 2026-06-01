@@ -5,6 +5,9 @@ import React, { useState } from 'react'
 import { IoMdSearch } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useSelector } from 'react-redux';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
+
 
 const Navbar = () => {
 
@@ -25,47 +28,74 @@ const Navbar = () => {
     setShow(!show)
   }
 
-  const cartNumber = useSelector((state) => state.cartItemSlice.cartItems )
-  
-  
+  const cartNumber = useSelector((state) => state.cartItemSlice.cartItems)
 
+  const [menu, setMenu] = useState(false)
+
+  const handleMenu = () => {
+    setMenu(!menu)
+  }
 
   return (
-    <section className='container mx-auto relative top-5 '>
-      
-        <nav className='flex justify-between items-center ' >
+    <section className='container mx-auto relative md:top-5 '>
+
+      <div  className="md:hidden border bg-blue-500 py-2 px-2 font-bold text-2xl flex items-center justify-between  ">
+        <p className='text-xl '>RIFANAS..</p>
+         <div className="flex relative ">
+              <li className='font-bold md:text-2xl cursor-pointer ' title='Buy_Now'  > <Link href={'/cart'} > <MdOutlineShoppingCart />
+              </Link> </li>
+
+              <p className='w-[20px] h-[20px] bg-red-500 flex justify-center items-center text-white border rounded-full absolute t-0 left-4  text-lg' >{cartNumber.length}  </p>
+
+            </div>
+            
+        <div onClick={handleMenu} className="">                   
+        {menu === true ?
+          <p><RxCross2 /></p>
+          :
+          <p><GiHamburgerMenu /></p>
+        }
+
+        </div>
+      </div>
+
+      <nav className='flex justify-between items-center ' >
         <meta name='robots' content='index, follow' />
-        <meta property='og:title' content={ProductContext.name } />
-          <img src="/home/web_logo.png" alt="logo" />
-          <div className="container mx-auto flex justify-between items-center border w-[70%] rounded-2xl bg-[#03103D]   ">
-            <ul className='flex gap-16 py-2 px-5 text-white   '>
-                <li><Link href={'/'}>Home</Link> </li>
-                <li><Link href={'/about'} > Shop..</Link> </li>
-                <li>Services</li>
-                <li>Works</li>
-                <li>Blog</li>
-                <div className="flex relative ">
-                <li className='font-bold text-2xl cursor-pointer ' title='Buy_Now'  > <Link href={'/cart'} > <MdOutlineShoppingCart />
-                </Link> </li>
+        <meta property='og:title' content={ProductContext.name} />
 
-                <p className='w-[20px] h-[20px] bg-red-500 flex justify-center items-center text-white border rounded-full absolute t-0 left-4 ' >{cartNumber.length}  </p>
+        <img className='hidden md:block ' src="/home/web_logo.png" alt="logo" />
 
-                </div>
-            </ul>
-            <form onSubmit={heandleSearch} className='flex justify-between items-center gap-2' action="">
+        <div className={`container mx-auto md:flex justify-between items-center border md:w-[50%] rounded-2xl bg-[#03103D]  ${menu ? " absolute top-[50px] left-0  bg-black/80 w-full duration-1000 ease-in-out z-40 h-screen  " : "md:static  absolute  -left-[800px] "} `} >
+          <ul className='md:flex md:gap-16 lg:gap-10 py-2 px-5 text-white   '>
+            <li><Link href={'/'}>Home</Link> </li>
+            <li><Link href={'/about'} > Shop..</Link> </li>            
+            <li>Blog</li>
+            {/* cart length number................../////////////////////// */}
+            <div className="flex relative ">
+              <li className='font-bold text-2xl cursor-pointer ' title='Buy_Now'  > <Link href={'/cart'} > <MdOutlineShoppingCart />
+              </Link> </li>
+
+              <p className='w-[20px] h-[20px] bg-red-500 flex justify-center items-center text-white border rounded-full absolute t-0 left-4 ' >{cartNumber.length}  </p>
+
+            </div>
+          </ul>
+
+            {/* search place...................../////////////////////////////////// */}
+
+          <form onSubmit={heandleSearch} className='flex  items-center md:gap-2  ' action="">
             {show && (
 
-              <input value={quarry} onChange={(e) => setQuarry(e.target.value)} className='border border-white rounded-xl  text-white px-2 ' type="search" placeholder='Search..' />
+              <input value={quarry} onChange={(e) => setQuarry(e.target.value)} className='border border-white rounded-xl md:w-[100px]  text-white px-2 ' type="search" placeholder='Search..' />
             )
 
-            
+
             }
-            <p onClick={searchItem} className='text-white w-[40px] h-[40px] border bg-[#0087FF] flex justify-center items-center text-2xl rounded-full cursor-pointer '><IoMdSearch /></p>
+            <p onClick={searchItem} className='text-white w-[30px] h-[30px] border bg-[#0087FF] flex justify-center items-center text-2xl rounded-full cursor-pointer '><IoMdSearch /></p>
 
-            </form>
+          </form>
 
-          </div>
-        </nav>
+        </div>
+      </nav>
     </section>
   )
 }

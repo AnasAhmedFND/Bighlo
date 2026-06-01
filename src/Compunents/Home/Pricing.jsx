@@ -8,13 +8,13 @@ const josts = Jost({
 
 const Pricing = () => {
     return (
-        <section className='container mx-auto  py-10 '>
+        <section className='container mx-auto  py-10 md:px-0 px-2  '>
             <h6 className={`${josts.className} text-center text-[#19198a] `} >PRICING PLAN</h6>
-            <h2 className={`${josts.className} text-center font-bold text-4xl `} >Our affordable priing plans</h2>
+            <h2 className={`${josts.className} text-center font-bold md:text-4xl `} >Our affordable priing plans</h2>
 
-            <div className=" mt-10 flex justify-between ">
+            <div className=" mt-10 md:flex md:justify-between ">
                 {/* Left-div  */}
-                <div className=" w-[20%] flex-col justify-between ">
+                <div className=" md:w-[20%] flex-col justify-between ">
                     <div className=" rounded-2xl shadow-2xl border-4 border-[#2255] text-center p-4 mt-2 h-[150px] hover:bg-blue-500 flex flex-col justify-center items-center hover:text-white group  ">
                         <p className='text-blue-500 group-hover:text-white font-bold '>STARTER PLAN</p>
                         <h2 className={`${josts.className} font-bold text-3xl `} >$49.66</h2>
@@ -33,9 +33,9 @@ const Pricing = () => {
 
                 {/* Right-div */}
 
-                <div className="border-4  border-[#2255] rounded-2xl flex justify-between p-5 w-[78%] ">
+                <div className="md:border-4 md:mt-0 mt-2  border-[#2255] rounded-2xl flex justify-between p-5 md:w-[78%] ">
                     {/* Right-1 */}
-                    <div className="border-r-4 w-[48%] ">
+                    <div className="md:border-r-4 border-r w-[48%] ">
                         <h3 className= {`${josts.className} font-bold text-2xl text-[#03103D] `} >What’s Included in Plan:</h3>
                         <p className='flex items-center gap-3 mt-10'> <IoIosCheckmarkCircleOutline className='text-blue-500 text-2xl  ' />
                             Market sizing and share analysis</p>
@@ -55,7 +55,7 @@ const Pricing = () => {
                             Market sizing & analysis</p>
                     </div>
                     {/* Right-2 */}
-                    <div className=" w-1/2 ">
+                    <div className=" md:w-1/2 md:pl-0 pl-2 ">
                         <h2 className={`${josts.className} font-bold text-2xl text-[#03103D] `} >Our Business Approach:</h2>
 
                         <p className='mt-10'>Our experts follow the business strategy to grow up <br />
@@ -67,7 +67,7 @@ const Pricing = () => {
                         <p className='mt-4 gap-2 flex  items-center'><IoIosCheckmarkCircleOutline className='text-blue-500 text-2xl  ' /> Getting to know your business vision its key <br />
                             strategic drivers.</p>
 
-                            <button className='border text-white bg-linear-60 from-[#0808bd] to-[#030933fb]  px-8 py-4 text-center rounded-full font-bold mt-5 '>Purchase Now</button>
+                            <button className='border text-white bg-linear-60 from-[#0808bd] to-[#030933fb]  md:px-8 px-4 md:py-4 py-2 text-center rounded-full md:font-bold mt-5 '>Purchase Now</button>
                     </div>
 
                 </div>

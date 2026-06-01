@@ -7,8 +7,8 @@ import { GoDotFill } from "react-icons/go";
 const Footer = () => {
   return (
     <section>
-      <div className="border py-20 bg-[#04245D] text-white  ">
-        <div className="container mx-auto flex justify-between">
+      <div className=" md:py-20 py-10 bg-[#04245D] text-white  ">
+        <div className="container mx-auto md:flex md:justify-between md:px-0  px-2 ">
         {/* one */}
         <div className="">
           <img src="/home/footer/logo-ff.png" alt="logo" />
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/* two */}
-        <div className=" w-[22%] ">
+        <div className=" md:w-[22%] md:mt-0 mt-4  ">
           <h3  className='font-bold text-2xl '>Latest Work</h3>
           <div className="flex flex-wrap justify-between gap-4 mt-4">
             <img src="/home/footer/list2 (1).png" alt="version_logo_ai" />
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         {/* three */}
-        <div className="">
+        <div className=" md:mt-0 mt-4 ">
           <h3  className='font-bold text-2xl '>Useful Links</h3>
           <p className='mt-4 flex items-center gap-1 '><span className=' text-blue-500 pr-2'><GoDotFill /></span> Advertising & Marketing</p>
           <p className='mt-4 flex items-center gap-1 '><span className=' text-blue-500 pr-2'><GoDotFill /></span> Healthcare & Medicine</p>
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         {/* four */}
-        <div className="">
+        <div className=" md:mt-0 mt-4 ">
           <h3 className='font-bold text-2xl '>Contact Us</h3>
           <h4 className='text-blue-500 mt-4'>Office Location</h4>
           <p>124, Queens walk 2nd cross Denmark</p>

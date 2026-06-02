@@ -9,7 +9,7 @@ const ProductProvider = ({children}) => {
 
     useEffect (() => {
         const lodeContext = async () => {
-            const res = await fetch("https://dummyjson.com/products");
+            const res = await fetch("https://dummyjson.com/products?limit=0");
             const data = await res.json();
             setProduct(data.products);
         };

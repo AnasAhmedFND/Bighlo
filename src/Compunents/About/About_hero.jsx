@@ -35,10 +35,10 @@ const About_hero = (props) => {
             </div>
             {/* container about hero........................................... */}
 
-            <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px]  mt-8  ">
+            <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px]  mt-8 md:px-0 px-2 ">
                 {/* head text & icons .................................................. */}
                 <div className=" flex justify-between text-[#f0f5f4] ">
-                    <div className="flex gap-3 items-center">
+                    <div className="flex gap-3 items-center ">
                         <p>Welcome to Bithlo for you analysis</p>
                         {/* cart lenth icon........................................  */}
                         <Link href={'/cart'}>
@@ -54,7 +54,8 @@ const About_hero = (props) => {
                         </div>
 
                     </div>
-                    <div className="flex items-center gap-2 ">
+                    <div className="hidden md:block ">
+                    <div className="flex items-center gap-2    ">
                         <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center cursor-pointer ' ><GrFacebookOption /></p>
                         <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center cursor-pointer ' ><FaPinterestP /></p>
                         <p className='border w-[30px] h-[30px] rounded-full flex justify-center items-center cursor-pointer ' ><RiTwitterFill /></p>
@@ -62,20 +63,22 @@ const About_hero = (props) => {
                         <p title='+880 12345678' className='text-2xl cursor-pointer'><IoIosCall /> </p>
                         <small> Start your project +00 888 27 240</small>
                     </div>
+
+                    </div>
                 </div>
                 {/* navbar */}
 
                 <nav className=' flex items-center justify-between mt-2 '>
-                    <img className='' src="/home/web_logo.png" alt="logo" />
+                    <img className='md:block hidden ' src="/home/web_logo.png" alt="logo" />
 
                     <ul className='flex items-center justify-between  w-[70%] rounded-full pl-5 bg-[#094477] text-white '>
                         <li><Link href={'/'} > Home </Link> </li>
                         <li><Link href={'/about'} > Fashion </Link> </li>
-                        <li>Services</li>
+                        
                         <li>Blog</li>
-                        <li>Contact</li>
+                        
                         <li className='text-2xl '><IoMdSearch /></li>
-                        <li className='border bg-white text-black py-3 px-5 rounded-full'>
+                        <li className='border bg-white text-black py-3 px-5 rounded-full md:block hidden '>
                             <button>Get in Touch</button>
                         </li>
                     </ul>
@@ -85,7 +88,7 @@ const About_hero = (props) => {
                 <div className="text-center flex  justify-center items-center text-white mt-4 ">
                     {/* Left */}
 
-                    <div className="w-[40%]  h-[320px]  border-r-4  flex flex-col items-center  ">
+                    <div className="md:w-[40%]  md:h-[320px]  md:border-r-4  flex flex-col items-center  ">
                         <img className='border rounded-full' src="/about/link.png" alt="t-shart" />
 
                         <h2 className='font-bold text-3xl'>{props.title} </h2>
@@ -98,7 +101,8 @@ const About_hero = (props) => {
 
                     </div>
                     {/* Right */}
-                    <div className="w-[55%] flex justify-end   h-[320px] text-white items-center ">
+                    <div className="w-[55%] md:block hidden  ">
+                    <div className=" flex justify-end   h-[320px] text-white items-center ">
                         <div className="">
                             <h2 className={`${macondo.className} text-4xl font-bold text-[#dff304] `}>RIFANAS FASHION </h2>
                             <h2 className='text-3xl font-bold'>Let's configure you own <br />
@@ -109,6 +113,8 @@ const About_hero = (props) => {
                         </div>
                         <img className='w-[300px] h-[300px] ' src="/about/hero/t-shart.png" alt="mans" />
 
+
+                    </div>
 
                     </div>
                 </div>

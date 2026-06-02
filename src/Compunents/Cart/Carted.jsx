@@ -159,9 +159,8 @@ const Carted = () => {
 
                     {/* Right div//////////////// */}
 
-                    <div className="w-[30%] border text-white " style={{ backgroundImage: "url('/cart/bg-cart.png')", }} >
+                    <div className="w-[30%] border h-[700px] text-white " style={{ backgroundImage: "url('/cart/bg-cart.png')", }} >
                         <div className="z-20 px-4 text-center pt-5 bg-[#101141c6] h-full  ">
-
                             <h3 className='text-4xl text-center font-bold mt-5 '>PAYMENT INFO</h3>
                             <h5 className='font-semibold text-3xl mt-5 '>Discunt / Promo Code</h5>
 

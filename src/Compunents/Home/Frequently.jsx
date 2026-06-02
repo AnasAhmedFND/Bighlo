@@ -15,14 +15,14 @@ const Frequently = () => {
 
 
     return (
-        <section className='container mx-auto md:py-10 md:pb-0 pb-5 md:px-0 px-2  '>
+        <section className='container mx-auto md:py-10  pb-5 md:px-0 px-2  '>
             <h2 className='text-center font-bold text-2xl '>Frequently Asked Questions</h2>
             <p className='text-center mt-2'> <small>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et <br />
                 dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
             </small> </p>
 
-            <div className=" md:flex md:justify-between md:mt-14 flex flex-col-reverse ">
+            <div className=" md:flex md:flex-row md:justify-between md:mt-14 flex flex-col-reverse ">
                 {/* left-div */}
                 <div className=" md:w-[50%]">
                     {/* one */}

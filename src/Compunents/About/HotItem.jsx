@@ -43,7 +43,7 @@ const HotItem = () => {
                     <img className='rounded-2xl' src={item.thumbnail} alt="man" />
                     <h6 className='font-bold mt-4'>{item.title} </h6>
                     
-                    <p> ${item.price} - <span className='line-through text-red-500'>$23.56 </span> </p>
+                    <div> ${item.price} - <span className='line-through text-red-500'>$23.56 </span> </div>
 
                     
                     <button onClick={() => handleAddToCart(item) } title='For-Today' className='font-bold text-center py-2 bg-green-400 text-white w-full mt-2 cursor-pointer flex justify-center items-center gap-3'>Buy Now <RiShoppingCartLine className='font-bold text-2xl' /></button>

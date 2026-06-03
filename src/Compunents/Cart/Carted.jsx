@@ -111,8 +111,7 @@ const Carted = () => {
                         {/* items-All */}
                         <div className=" mt-8 pb-10 ">
                            {cartData.map((item)=> (
-                                <div className="flex border-t pt-2  mt-2">
-                                    {/* img and titles............................  */}
+                                <div className="flex border-t pt-2  mt-2">                                    
                                     <div className="flex items-center w-[49%] gap-4 ">
                                         <img className='md:w-[100px] w-[60px] border  ' src={item.thumbnail} alt="" />
                                         <p className='md:font-bold md:text-[14px] text-[10px] '>{item.title}</p>

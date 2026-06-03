@@ -56,27 +56,23 @@ const Carted = () => {
     const subTotal = (totalPrice + 2 );
 
 
-    
-
-
 
     return (
-        <section className=' bg-[#E5F4ED]  '>
+        <section className=' bg-[#E5F4ED]  md:px-0 px-2 '>
             <div className="bg-[#050b7b]">
                 <div className=" container mx-auto py-5">
                     <nav className=' flex items-center justify-between mt-2 '>
-                        <img className='' src="/home/web_logo.png" alt="logo" />
+                        <img className='md:block hidden ' src="/home/web_logo.png" alt="logo" />
 
-                        <ul className='flex items-center justify-between  w-[70%] rounded-full pl-5 bg-[#094477] text-white '>
+                        <ul className='flex items-center justify-between md:gap-0 gap-5  md:w-[70%] rounded-full md:pl-5 pl-2 bg-[#094477] text-white  '>
                             <li><Link href={'/'} > Home </Link> </li>
-                            <li><Link href={'/about'} > Fashion </Link> </li>
-                            <li>Services</li>
+                            <li><Link href={'/about'} > Fashion </Link> </li>                            
 
                             <li>Blog</li>
-                            <li>Contact</li>
+                            
                             <li className='text-2xl '><IoMdSearch /></li>
-                            <li className='border bg-white text-black py-3 px-5 rounded-full'>
-                                <button>Get in Touch</button>
+                            <li className='border bg-white text-black md:py-3 md:px-5 px-2 rounded-full  '>
+                                <button className=' ' >Get in Touch</button>
                             </li>
                         </ul>
                     </nav>
@@ -84,10 +80,10 @@ const Carted = () => {
                 </div>
 
             </div>
-            <div className="container mx-auto">
-                <div className="  flex justify-between items-center  ">
+            <div className="container mx-auto md:mt-0 mt-2">
+                <div className="  md:flex md:justify-between items-center  ">
 
-                    <div className="w-[45%] ">
+                    <div className="md:w-[45%] ">
                         <h2 className='flex justify-center text-4xl font-bold text-red-500 '>Cart_Page 🔰</h2>
 
                         <div className="flex justify-center py-10">
@@ -97,16 +93,16 @@ const Carted = () => {
 
                     </div>
 
-                    <div className="w-[45%] ">
+                    <div className="md:w-[45%] ">
                         <img className='w-[400px]  ' src="/cart/model.png" alt="" />
                     </div>
 
                 </div>
 
                 {/*  shopping itmes place */}
-                <div className="flex justify-between pb-10 ">
+                <div className="md:flex md:justify-between pb-10 ">
                     {/* left */}
-                    <div className="w-[68%] border ">
+                    <div className="md:w-[68%] md:border ">
                         <h4 className={`${felipap.className}  pb-5 font-bold text-5xl bg-[#F56540] py-4 text-white px-4 `} > Shopping cart</h4>
 
                         <p className='font-bold mt-2'>Shopping cart</p>
@@ -118,8 +114,8 @@ const Carted = () => {
                                 <div className="flex border-t pt-2  mt-2">
                                     {/* img and titles............................  */}
                                     <div className="flex items-center w-[49%] gap-4 ">
-                                        <img className='w-[100px] border  ' src={item.thumbnail} alt="" />
-                                        <p className='font-bold'>{item.title}</p>
+                                        <img className='md:w-[100px] w-[60px] border  ' src={item.thumbnail} alt="" />
+                                        <p className='md:font-bold md:text-[14px] text-[10px] '>{item.title}</p>
                                     </div>
 
                                     {/* increment & dicrement icons ..........................*/}
@@ -135,7 +131,7 @@ const Carted = () => {
 
                                         {/* price and delete tag ///.......//////.............*/}
 
-                                        <p>$ {item.price} </p>
+                                        <p className='md:text-[16px] text-[10px] ' >$ {item.price} </p>
 
                                         <p onClick={() => handleDeleteProduct(item) } className='text-xl cursor-pointer hover:text-[#F56540] '><RiDeleteBin6Line /></p>
                                     </div>
@@ -150,16 +146,17 @@ const Carted = () => {
 
                         {/* Bottm Buttons */}
                         <div className="flex justify-between  py-4 px-10 mt-8 ">
-                            <button onClick={ handleCartAll } className='font-bold border rounded-full py-2 px-8 text-2xl bg-[#F56540] text-white cursor-pointer '>Update cart </button>
+                            <button onClick={ handleCartAll } className='md:font-bold border rounded-full py-2 md:px-8 px-2 md:text-2xl bg-[#F56540] text-white cursor-pointer '>Update cart </button>
                             <Link href={'/about'} >
-                            <button className='font-bold border rounded-full py-2 px-8 text-2xl flex items-center cursor-pointer ' > <IoIosArrowRoundBack /> Continue shopping </button>
+
+                            <button className='md:font-bold border rounded-full py-2 md:px-8 px-2 md:text-2xl flex items-center cursor-pointer ' > <IoIosArrowRoundBack /> Continue shopping </button>
                             </Link>
                         </div>
                     </div>
 
                     {/* Right div//////////////// */}
 
-                    <div className="w-[30%] border h-[700px] text-white " style={{ backgroundImage: "url('/cart/bg-cart.png')", }} >
+                    <div className="md:w-[30%] border h-[700px] text-white " style={{ backgroundImage: "url('/cart/bg-cart.png')", }} >
                         <div className="z-20 px-4 text-center pt-5 bg-[#101141c6] h-full  ">
                             <h3 className='text-4xl text-center font-bold mt-5 '>PAYMENT INFO</h3>
                             <h5 className='font-semibold text-3xl mt-5 '>Discunt / Promo Code</h5>
@@ -170,10 +167,10 @@ const Carted = () => {
                             </div>
 
                             <h3 className='mt-10 text-4xl'>Cart totals</h3>
-                            <div className="flex gap-10 font-bold mt-14 border-b-2 pb-5">
+                            <div className="flex md:gap-10 gap-2 font-bold mt-14 border-b-2 pb-5">
                                 <div className="text-end ">
-                                    <p>Subtotal</p>
-                                    <p className='mt-4'>Total</p>
+                                    <p>Subtotal : </p>
+                                    <p className='mt-4'>Total : </p>
                                 </div>
 
                                 <div className="">
@@ -181,9 +178,9 @@ const Carted = () => {
                                     <p className='mt-4'>$ {totalPrice.toFixed(2)} </p>
                                 </div>
 
-                                <h6>Total Quantity : {cartData.length} </h6>
 
                             </div>
+                                <h6>Total Quantity : {cartData.length} </h6>
 
 
 
@@ -196,7 +193,7 @@ const Carted = () => {
                             </div>
 
 
-                            <button className='border px-10 bg-green-400 rounded-full py-2 text-2xl mt-[70px] cursor-pointer  '><Link href={'/payment'} >PAYMENT NOW.. </Link> </button>
+                            <button className='border md:px-10 px-5 bg-green-400 rounded-full py-2 md:text-2xl text-xl mt-[70px] cursor-pointer  '><Link href={'/payment'} >PAYMENT NOW.. </Link> </button>
 
 
                         </div>
@@ -204,6 +201,7 @@ const Carted = () => {
 
 
                     </div>
+
                 </div>
 
             </div>

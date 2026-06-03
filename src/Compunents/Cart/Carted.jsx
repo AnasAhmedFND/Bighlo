@@ -80,7 +80,7 @@ const Carted = () => {
                 </div>
 
             </div>
-            <div className="container mx-auto md:mt-0 mt-2">
+            <div className="container mx-auto md:mt-0 mt-3">
                 <div className="  md:flex md:justify-between items-center  ">
 
                     <div className="md:w-[45%] ">

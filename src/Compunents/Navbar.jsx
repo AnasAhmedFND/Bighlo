@@ -40,12 +40,12 @@ const Navbar = () => {
     <section className='container mx-auto relative md:top-5 '>
 
       <div  className="md:hidden border bg-blue-500 py-2 px-2 font-bold text-2xl flex items-center justify-between  ">
-        <p className='text-xl '>RIFANAS..</p>
+        <p className='text-xl '> RIFANAS..</p>
          <div className="flex relative ">
               <li className='font-bold md:text-2xl cursor-pointer ' title='Buy_Now'  > <Link href={'/cart'} > <MdOutlineShoppingCart />
               </Link> </li>
 
-              <p className='w-[20px] h-[20px] bg-red-500 flex justify-center items-center text-white border rounded-full absolute t-0 left-4  text-lg' >{cartNumber.length}  </p>
+              <div className='w-[20px] h-[20px] bg-red-500 flex justify-center items-center text-white border rounded-full absolute t-0 left-4  text-lg' > {cartNumber.length} </div>
 
             </div>
             
@@ -65,7 +65,7 @@ const Navbar = () => {
 
         <img className='hidden md:block ' src="/home/web_logo.png" alt="logo" />
 
-        <div className={`container mx-auto md:flex justify-between items-center border md:w-[50%] rounded-2xl bg-[#03103D]  ${menu ? " absolute top-[50px] left-0  bg-black/80 w-full duration-1000 ease-in-out z-40 h-screen  " : "md:static  absolute  -left-[800px] "} `} >
+        <div className= {`container mx-auto md:flex justify-between items-center border md:w-[50%] rounded-2xl bg-[#03103D]  ${menu ? " absolute top-[50px] left-0  bg-black/80 w-full duration-1000 ease-in-out z-40 h-screen  " : "md:static  absolute  -left-[800px] "} `} >
           <ul className='md:flex md:gap-16 lg:gap-10 py-2 px-5 text-white    '>
             <li className='md:border-b-none border-b md:pb-0 pb-2'><Link href={'/'}>Home</Link> </li>
             <li className='md:border-b-none border-b md:pb-0 pb-2'><Link href={'/about'} > Shop..</Link> </li>            

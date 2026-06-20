@@ -23,6 +23,7 @@ const Frequently = () => {
             </small> </p>
 
             <div className=" md:flex md:flex-row md:justify-between md:mt-14 flex flex-col-reverse ">
+                
                 {/* left-div */}
                 <div className=" md:w-[50%]">
                     {/* one */}

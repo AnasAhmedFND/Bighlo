@@ -38,17 +38,17 @@ const About_hero = (props) => {
             <div className="container mx-auto left-1/2 -translate-1/2 absolute top-[188px]  mt-8 md:px-0 px-2 ">
                 {/* head text & icons .................................................. */}
                 <div className=" flex justify-between text-[#f0f5f4] ">
-                    <div className="flex gap-3 items-center ">
-                        <p>Welcome to Bithlo for you analysis</p>
+                    <div className="flex gap-3 items-center  ">
+                        <small>Welcome to Bithlo for you analysis</small>
                         {/* cart lenth icon........................................  */}
                         <Link href={'/cart'}>
-                            <div className="relative cursor-pointer  ">
+                            <div className="relative cursor-pointer   ">
                                 <p className='border-2 font-bold p-1 rounded-full '><RiShoppingCartLine /></p>
-                                <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '> {cartItemNumber.length } </p>
+                                <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold  '> {cartItemNumber.length } </p>
                             </div>
                         </Link>
                         {/* Heart lenth icon.......................................................... */}
-                        <div className="relative">
+                        <div className="relative  ">
                             <p className='border-2 font-bold p-1 rounded-full  ml-3 '><FaRegHeart /></p>
                             <p className='border w-[20px] h-[20px] rounded-full bg-red-500 text-white absolute top-[1px] -right-[12px] flex justify-center items-center font-bold '>1</p>
                         </div>

@@ -82,15 +82,15 @@ const Categories = () => {
       {/* main_div_items's */}
       <div className="  mt-4 ">
 
-        <div className="slider-container  ">
+        <div className="slider-container ">
           <Slider {...settings}>
 
             {filterProduct.map((item, index) => (
-              <div key={item.id} className="grid grid-flow-row md:grid-cols-4 grid-cols-2 px-4 justify-between  ">
+              <div key={item.id} className="md:flex  px-4 justify-between  ">
                 <div className="border p-2 pb-4  rounded-t-xl w-[80%]  bg-[#F5F5F5] relative  ">
                   <img className=' ' src={item.thumbnail} alt={item.title} />
                   <div className="absolute md:top-5 top-2 md:left-5 left-2 flex flex-col gap-4 ">
-                    <p onClick={() => handleAddToCart(item) } className='font-bold text-2xl cursor-pointer ' title='Add To Cart'  ><FaShopify /></p>
+                    <p onClick={() => handleAddToCart(item) } className='font-bold text-2xl cursor-pointer ' title='Add To Cart'  > <FaShopify /> </p>
                     <p className='font-bold text-2xl cursor-pointer '  ><BiSolidLike /></p>
 
                   </div>

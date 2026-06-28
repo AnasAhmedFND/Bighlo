@@ -66,11 +66,11 @@ const Arrivals = () => {
 
             </div>
             {show && (
-                <div className="snap-y  flex flex-wrap gap-2 p-4 ">
+                <div className="snap-y  flex flex-wrap  gap-2 p-4 ">
                     {
                         uniqueCategories.map((category) => (
                             <div key={category} className=" ">
-                                <small onClick={() => handleCategory(category)} className={` ${playpen.className} border py-1 px-2 rounded-lg bg-[#F5F5F5] text-[#f5f] hover:bg-[#0bf0e0] hover:text-white cursor-pointer `}  >{category}</small>
+                                <small onClick={() => handleCategory(category)}  className={` ${playpen.className} border py-1 px-2 rounded-lg bg-[#F5F5F5] text-[#f5f] hover:bg-[#0bf0e0] hover:text-white cursor-pointer `}  > {category} </small>
                             </div>
                         ))
                     }
@@ -79,9 +79,9 @@ const Arrivals = () => {
 
             )}
 
-            <div className="flex justify-between mt-5 overflow-x-auto">
+            <div className="md:flex justify-between mt-5 overflow-x-auto">
                 {filterProduct.slice(0, 4).map((item) => (
-                    <div key={item.id} className="w-[23%]  text-center font-bold border-t  rounded-2xl overflow-x-auto ">
+                    <div key={item.id} className="md:w-[23%] md:mt-0 mt-2 text-center font-bold border-t  rounded-2xl overflow-x-auto ">
 
                         <img className='rounded-xl' src={item.thumbnail} alt={item.title} />
                         <h6 className='mt-4'>{item.title}</h6>

@@ -43,7 +43,7 @@ const HotItem = () => {
                     <img className='rounded-2xl' src={item.thumbnail} alt="man" />
                     <h6 className='font-bold mt-4'>{item.title} </h6>
                     
-                    <div> ${item.price} - <span className='line-through text-red-500'>$23.56 </span> </div>
+                    <p> ${item.price}  <span className='line-through text-red-500'>$23.56 </span> </p>
 
                     
                     <button onClick={() => handleAddToCart(item) } title='For-Today' className='font-bold text-center py-2 bg-green-400 text-white w-full mt-2 cursor-pointer flex justify-center items-center gap-3'>Buy Now <RiShoppingCartLine className='font-bold text-2xl' /></button>
@@ -66,8 +66,8 @@ const HotItem = () => {
                     <div className=" md:w-[48%] relative  ">
                         <img className='h-[320px] w-full ' src="/about/benner/Tablist.png" alt="banner" />
                         <div className="absolute top-[80px] pl-8  ">
-                            <h6 className='font-bold text-4xl'>10% off your <br />first order 👉➡</h6>
-                            <p className='mt-2'>Free and easy way to bring <br />your ideas to life</p>
+                            <h6 className='font-bold text-4xl'> 10% off your <br />first order 👉➡ </h6>
+                            <p className='mt-2'> Free and easy way to bring <br />your ideas to life </p>
                             <button className='font-bold mt-4 border rounded-2xl py-2 px-4 bg-[#e2c6e29e] '>Shop Now</button>
 
                         </div>

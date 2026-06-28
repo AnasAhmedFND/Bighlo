@@ -47,26 +47,7 @@ const Categories = () => {
   autoplaySpeed: 5000,
   cssEase: "linear",
 
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
+ 
 };
 
   // Add  to cart...............................................
@@ -77,8 +58,8 @@ const Categories = () => {
   }
 
   return (
-    <section className='container  mx-auto  py-10 md:px-0 px-2  '>
-      <h3 className='font-bold text-2xl '>Shopping by Categories </h3>
+    <section className='container  mx-auto  md:py-10 md:px-0 px-2  '>
+      <h3 className='font-bold text-2xl '> Shopping by Categories </h3>
       {/* main_div_items's */}
       <div className="  mt-4 ">
 
@@ -86,12 +67,12 @@ const Categories = () => {
           <Slider {...settings}>
 
             {filterProduct.map((item, index) => (
-              <div key={item.id} className="md:flex  px-4 justify-between  ">
+              <div key={item.id} className="md:flex px-4 justify-between  ">
                 <div className="border p-2 pb-4  rounded-t-xl w-[80%]  bg-[#F5F5F5] relative  ">
-                  <img className=' ' src={item.thumbnail} alt={item.title} />
+                  <img src={item.thumbnail} alt={item.title} />
                   <div className="absolute md:top-5 top-2 md:left-5 left-2 flex flex-col gap-4 ">
                     <p onClick={() => handleAddToCart(item) } className='font-bold text-2xl cursor-pointer ' title='Add To Cart'  > <FaShopify /> </p>
-                    <p className='font-bold text-2xl cursor-pointer '  ><BiSolidLike /></p>
+                    <p className='font-bold text-2xl cursor-pointer '  > <BiSolidLike /> </p>
 
                   </div>
                   <div className="flex justify-between px-4 py-2 border-t-2 ">
